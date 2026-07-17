@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class RailwayReservation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int seats = 5;
+
+        System.out.print("Enter number of tickets: ");
+        int tickets = sc.nextInt();
+
+        if (tickets <= seats) {
+            seats -= tickets;
+            System.out.println("Ticket Booked Successfully!");
+            System.out.println("Available Seats: " + seats);
+        } else {
+            System.out.println("Sorry! Seats not available.");
+        }
+
+        sc.close();
+    }
+}
